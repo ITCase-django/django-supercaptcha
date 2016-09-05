@@ -13,8 +13,10 @@ from django.utils.safestring import mark_safe
 from django.utils.translation import ugettext_lazy
 from django.views.decorators.cache import never_cache
 
-from supercaptcha import settings
+from django_supercaptcha import settings
 
+
+__version__ = '1.0.0'
 
 try:
     from threading import local
