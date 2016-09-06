@@ -59,9 +59,6 @@ Options
   * - CAPTCHA_FOREGROUND_COLORS
     - tuple of tuples with colors for text. use one if if you want single color, for example ((0,0,0),) for black color
     -
-  * - CAPTCHA_COLORIZE_SYMBOLS
-    - whould we use different colors for each symbol.
-    - ``default`` is ``True``
   * - CAPTCHA_BACKGROUND_COLOR`
     - background color,
     - ``deafult`` is ``(255, 255, 255)``

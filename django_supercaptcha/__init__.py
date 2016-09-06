@@ -34,7 +34,6 @@ BG_COLOR = settings.BACKGROUND_COLOR
 FG_COLORS = settings.FOREGROUND_COLORS
 ENC_TYPE, MIME_TYPE = settings.FORMAT
 JUMP = settings.VERTICAL_JUMP
-COLORIZE = settings.COLORIZE_SYMBOLS
 PREFIX = settings.CACHE_PREFIX
 CODE_ATTR_NAME = '_captcha_code'
 ERROR_MESSAGE = settings.DEFAULT_ERROR_MESSAGE
@@ -99,11 +98,6 @@ def draw(request, code):
     im = Image.new(icolor, (WIDTH, HEIGHT), BG_COLOR)
     d = ImageDraw.Draw(im)
     if JUMP:
-        if COLORIZE:
-            get_color = lambda: choice(FG_COLORS)
-        else:
-            color = choice(FG_COLORS)
-            get_color = lambda: color
         position = [(WIDTH - text_size[0]) / 2, 0]
         shift_max = HEIGHT - text_size[1]
         shift_min = shift_max / 4
@@ -114,7 +108,7 @@ def draw(request, code):
                 position[1] = choice(range(shift_min, shift_max + 1))
             except IndexError:
                 position[1] = shift_min
-            d.text(position, char, font=font, fill=get_color())
+            d.text(position, char, font=font, fill=choice(FG_COLORS))
             position[0] += l_size[0]
     else:
         position = [(WIDTH - text_size[0]) / 2,
