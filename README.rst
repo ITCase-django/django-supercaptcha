@@ -29,7 +29,7 @@ Usage
 .. code-block:: python
 
     class MySuperForm(forms.Form):
-        captcha = supercaptcha.CaptchaField(label=u"no robots here")
+        captcha = django_supercaptcha.CaptchaField(label=u"no robots here")
 
 
 All you need, to get captcha working is properly configured cache backend and a route:
@@ -37,13 +37,12 @@ All you need, to get captcha working is properly configured cache backend and a 
 
 .. code-block:: python
 
-    url(r'^captcha/(?P<code>[\da-f]{32})/$', 'supercaptcha.draw')
+    url(r'^captcha/(?P<code>[\da-f]{32})/$', 'django_supercaptcha.draw')
 
 
 
 Options
 =======
-
 
 .. list-table::
   :widths: 10 20 5
