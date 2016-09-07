@@ -142,6 +142,7 @@ class CaptchaImageWidget(forms.Widget):
             'src': reverse(draw, kwargs={'code': code}),
             'input_attrs': flatatt(input_attrs),
             'alt': settings.ALT,
+            'title': settings.TITLE,
             'width': WIDTH,
             'length': LENGTH,
             'height': HEIGHT,

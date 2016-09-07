@@ -49,10 +49,10 @@ Options
 
   * - CAPTCHA_SYMBOLS
     - string with all symbols, which should be used in captcha.
-    - ``default`` is ``123456789ABCDEFGHJKLMNPQRSTVXYZ``
+    - ``default``: ``123456789ABCDEFGHJKLMNPQRSTVXYZ``
   * - CAPTCHA_LENGTH
     - length if captcha code.
-    - ``default`` is ``6``
+    - ``default``: ``4``
   * - CAPTCHA_FONTS
     - the tuple of tuples with name - fullpath pair for each font which should be used
     -
@@ -61,39 +61,42 @@ Options
     -
   * - CAPTCHA_BACKGROUND_COLOR`
     - background color,
-    - ``deafult`` is ``(255, 255, 255)``
+    - ``deafult``: ``(255, 255, 255)``
   * - CAPTCHA_FILTER_CHAIN
     - PIL filters, for example `('BLUR', 'SHARPEN',)`
-    - ``default`` is ``[]``
+    - ``default``: ``[]``
   * - CAPTCHA_VERTICAL_JUMP
     - defines if letters should "jump",
-    - ``default`` is ``True``
+    - ``default``: ``True``
   * - CAPTCHA_SIZE
     - tuple defining size of captcha image
-    - ``default`` is ``(200, 100)``
+    - ``default`: ``(120, 50)``
   * - CAPTCHA_ALT
-    - "alt" and "title" for image tag,
-    - ``default`` is ``no robots here``
+    - "alt" for image tag,
+    - ``default``: ``no robots here``
+  * - CAPTCHA_TITLE
+    - "title" for image tag,
+    - ``default``: ``no robots here``
   * - CAPTCHA_FORMAT
     - controls which format will be used for image encoding
-    - ``default`` is ``('JPEG', 'image/jpeg')``
+    - ``default``: ``('JPEG', 'image/jpeg')``
   * - CAPTCHA_CACHE_PREFIX
     - defines which prefix should supercaptcha use for dealing with cache
-    - ``default`` is ``captcha``
+    - ``default``: ``captcha``
   * - CAPTCHA_DEFAULT_ERROR_MESSAGE
     - defines default error message for wrong code
-    -
+    - ``default``: ``The code you entered is wrong``
   * - CAPTCHA_REFRESH
     - defines if CaptchaField should show refresh link
-    - ``default`` is ``False``
+    - ``default``: ``True``
   * - CAPTCHA_REFRESH_LINK_TEXT`
     - defines text of refresh link
-    -
+    - ``default``: ``refresh?``
   * - CAPTCHA_HTML_TEMPLATE`
-    - defines template of ``CaptchaField``, see example in settings
+    - defines template of ``CaptchaField``, see example in settings ``settings.py``
     -
   * - CAPTCHA_HTML_TEMPLATE_WITH_REFRESH`
-    - defines template of ``CaptchaField`` with refresh link, see example in settings
+    - defines template of ``CaptchaField`` with refresh link, see example in ``settings.py``
     -
 
 .. _django: http://djangoproject.com/
